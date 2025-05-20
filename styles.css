@@ -24,7 +24,7 @@
 }
 
 header {
-    background-color: #141414;
+    background-color: #080808;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -88,8 +88,68 @@ header {
     z-index: 1;
 }
 
+#sobre {
+    display: inline-block;
+    margin-right: 0;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(45deg, #4e12f9, #6216c7, #3b0d77, #080808);
+}
+
+#sobre_content {
+    background: linear-gradient(90deg, #1e1e1e, #010101);
+    margin-right: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.sobre_title h1 {
+    background: linear-gradient(90deg, #761bef, #4e12f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    display: inline-block;
+    width: fit-content;
+    line-height: 1.6em;
+    margin-left: 3rem;
+    margin-bottom: 4rem;
+    padding-top: 3rem;
+}
+
+.sobre_body {
+    color: #dbdad9;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 2em;
+    padding-bottom: 1.6em;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#sobre_text {
+    text-indent: 3rem;
+}
+
+#sobre_logo {
+    position: absolute;
+    margin-left: 60%;
+}
+
+#objetivos {
+    padding-top: 2rem;
+    margin-left: 4rem;
+    margin-bottom: 4em;
+}
+
 footer {
-    background-color: #141414;
+    background-color: #080808;
     font-family: "Open Sans", sans-serif;
     color: #dbdad9;
     text-align: center;
