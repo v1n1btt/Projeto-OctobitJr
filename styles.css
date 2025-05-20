@@ -31,9 +31,10 @@ header {
     align-items: center;
     position: sticky;
     top: 0px;
+    z-index: 3;
 }
 
-.nav_logo {
+.nav_logo_a {
     width: 100px;
     left: 50px;
     object-fit: contain;
@@ -41,18 +42,48 @@ header {
     position: relative;
 }
 
+.nav_logo {
+    width: 100px;
+    object-fit: contain;
+    float: left;
+    position: relative;
+}
+
 .main_content_octobit {
+    width: 100vw;
+    height: 100vh;
     background-color: black;
+    z-index: 0;
 }
 
 #main_octobit_logo {
-    display: block;
-    margin: auto auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .main_content_octobit ul {
     display: flex;
+    position: relative;
     justify-content: center;
+    align-items: center;
     list-style-type: none;
     flex-wrap: nowrap;
+    height: 100vh;
+    z-index: 2;
+}
+
+.main_content_octobit li {
+    z-index: 2;
+    margin-top: 150px;
+}
+
+.main_content_octobit canvas {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    z-index: 1;
 }
