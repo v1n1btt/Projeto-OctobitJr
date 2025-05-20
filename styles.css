@@ -89,19 +89,23 @@ header {
 }
 
 #sobre {
-    display: inline-block;
-    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     height: 100%;
-    margin: 0;
     background: linear-gradient(45deg, #4e12f9, #6216c7, #3b0d77, #080808);
+}
+
+#sobre_logo {
+    max-width: 1000px;
+    height: auto;
 }
 
 #sobre_content {
     background: linear-gradient(90deg, #1e1e1e, #010101);
-    margin-right: 40%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    width: 60%;
+    flex: 1;
 }
 
 .sobre_title h1 {
@@ -131,21 +135,22 @@ header {
     padding-bottom: 1.6em;
     margin-left: 3rem;
     margin-right: 3rem;
+    flex: 1;
 }
 
 #sobre_text {
     text-indent: 3rem;
 }
 
-#sobre_logo {
-    position: absolute;
-    margin-left: 60%;
+#sobre_logo img {
+    max-width: 100%;
+    height: auto;
 }
 
 #objetivos {
     padding-top: 2rem;
     margin-left: 4rem;
-    margin-bottom: 4em;
+    margin-bottom: 4rem;
 }
 
 footer {
