@@ -40,3 +40,19 @@ header {
     float: left;
     position: relative;
 }
+
+.main_content_octobit {
+    background-color: black;
+}
+
+#main_octobit_logo {
+    display: block;
+    margin: auto auto;
+}
+
+.main_content_octobit ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-wrap: nowrap;
+}
