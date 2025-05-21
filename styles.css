@@ -99,7 +99,7 @@ header {
     right: 0;
     top: -500px;
     height: 500px;
-    background: linear-gradient(to top, black, transparent);
+    background: linear-gradient(to top, #010101, transparent);
     pointer-events: none;
     z-index: 2;
 }
@@ -173,7 +173,23 @@ header {
 }
 
 #equipe {
-    background: linear-gradient(0deg, #010101, #1e1e1e);
+    background: linear-gradient(0deg, #010101, #4e12f9, #6216c7, #3b0d77, #010101);
+}
+
+#equipe::before{
+    content: "";
+    position: absolute;
+    margin-top: -100px;
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(to top, black, transparent);
+    pointer-events: none;
+    z-index: 2;
+}
+
+#equipe_content {
+    background: linear-gradient(0deg, #010101, #1e1e1e, #010101);
+    margin: 0 10rem;
     padding-bottom: 4rem;
     text-align: center;
 }
