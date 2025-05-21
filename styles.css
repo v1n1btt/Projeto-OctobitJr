@@ -124,6 +124,9 @@ header {
     background: linear-gradient(0deg, #1e1e1e, #010101);
     width: 60%;
     flex: 1;
+
+    -webkit-mask-image: linear-gradient(to right, #1e1e1e 95%, transparent);
+    mask-image: linear-gradient(to right, #1e1e1e 95%, transparent);
 }
 
 .sobre_title h1 {
@@ -152,8 +155,8 @@ header {
     text-align: justify;
     line-height: 2em;
     padding-bottom: 1.6em;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
     flex: 1;
 }
 
