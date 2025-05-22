@@ -32,21 +32,19 @@
     <section class="main_content_octobit">
         <canvas id="matrix"></canvas>
 
-        <div class="main-content">
-            <div class="wrapper">
-                <img src="./img/Logo_OCTOBIT_Logo_Branco_HORIZONTAL.png" alt="Logo branco horizontal da Octobit Jr." id="main_octobit_logo">
+        <div class="wrapper">
+            <img src="./img/Logo_OCTOBIT_Logo_Branco_HORIZONTAL.png" alt="Logo branco horizontal da Octobit Jr." id="main_octobit_logo">
+            
+            <ul class="main_container">
+                <li class="main___container___icon">
+                    <a class="main___container___icon___instagram" target="_blank" href="https://www.instagram.com/octobitjr?igsh=MWp5M2t0bnJlajRyeQ=="><img src="./img/icon-instagram-white.png"></a>
+                </li>
                 
-                <ul class="main_container">
-                    <li class="main___container___icon">
-                        <a class="main___container___icon___instagram" target="_blank" href="https://www.instagram.com/octobitjr?igsh=MWp5M2t0bnJlajRyeQ=="><img src="./img/icon-instagram-white.png"></a>
-                    </li>
-                    
-                    <li class="main___container___icon">
-                        <a class="main___container___icon___linkedin" target="_blank" href="https://www.linkedin.com/company/octobit-empresa-j%C3%BAnior-usp/"><img src="./img/icon-linkedin-white.png"></a>
-                    </li>
-                </ul>
-            </div>    
-        </div>
+                <li class="main___container___icon">
+                    <a class="main___container___icon___linkedin" target="_blank" href="https://www.linkedin.com/company/octobit-empresa-j%C3%BAnior-usp/"><img src="./img/icon-linkedin-white.png"></a>
+                </li>
+            </ul>
+        </div>    
 
         <script>
             const canvas = document.getElementById('matrix');
@@ -102,7 +100,7 @@
     </section>
 
     <section id="sobre">        
-        <div id="sobre_content">
+        <div class="sobre_content">
             <div class="sobre_body">
                 <div class="sobre_title"><h1>Sobre nós</h1></div>
                 
@@ -129,7 +127,7 @@
 
 
     <section id="equipe">
-        <div id="equipe_content">
+        <div class="equipe_content">
             <div class="equipe_title"><h1>Nossa equipe</h1></div>
 
             <div class="equipe_container">
@@ -289,68 +287,92 @@
     </section>
 
     <section id="projetos">
-        <div class="projetos_title"><h1>Nossos projetos</h1></div>
+        <div class="projetos_content">
+            <div class="projetos_title"><h1>Nossos projetos</h1></div>
 
-        <div class="fsolar">
-            <div class="projeto_slider">
-                <div class="projeto_list">
-                    <div class="projeto_item">
-                        <img src="./projetos_files/fsolar.png" alt="Página inicial FSolar">
+            <div class="projetos_container">
+                <div class="fsolar">
+                    <div class="projeto_slider" id="slider1">
+                        <div class="projeto_list">
+                            <img src="./projetos_files/fsolar.png" alt="Página inicial FSolar" class="slide">
+                            <img src="./projetos_files/cadastro_FSolar.png" alt="Página de perfil FSolar" class="slide">
+                            <img src="./projetos_files/Imoveis_FSolar.png" alt="Página de imóveis FSolar" class="slide">
+                            <img src="./projetos_files/Cadastro_FSolar_2.png" alt="Página de cadastro FSolar" class="slide">
+                        </div>
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                        <ul class="projeto_dots">
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class="active"></li>
+                            <li></li>
+                        </ul>
                     </div>
-                    <div class="projeto_item">
-                        <img src="./projetos_files/cadastro_FSolar.png" alt="Página de perfil FSolar">
-                    </div>
-                    <div class="projeto_item">
-                        <img src="./projetos_files/Imoveis_FSolar.png" alt="Página de imóveis FSolar">
-                    </div>
-                    <div class="projeto_item">
-                        <img src="./projetos_files/Cadastro_FSolar_2.png" alt="Página de cadastro FSolar">
+                    <div class="projeto_text">
+                        <h2>Website FSolar</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et quam eu lacus tristique imperdiet.</p>
                     </div>
                 </div>
-                <div class="projeto_buttons">
-                    <button id="prev">&lt;</button>
-                    <button id="next">&gt;</button>
+                <div class="abba">
+                    <div class="projeto_slider" id="slider2">
+                        <div class="projeto_list">
+                            <img src="./projetos_files/ABBA_1.png" alt="Home ABBA" class="slide">
+                            <img src="./projetos_files/ABBA_2.png" alt="Notícias ABBA" class="slide">
+                            <img src="./projetos_files/ABBA_3.png" alt="Acadêmicos ABBA" class="slide">
+                        </div>
+                        <button class="prev">❮</button>
+                        <button class="next">❯</button>
+                        <ul class="projeto_dots">
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class="active"></li>
+                        </ul>
+                    </div>
+                    <div class="projeto_text">
+                        <h2>Website ABBA</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et quam eu lacus tristique imperdiet.</p>
+                    </div>
                 </div>
-                <ul class="projeto_dots">
-                    <li class=""></li>
-                    <li class=""></li>
-                    <li class="active"></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="projeto_text">
-                <h2>Website FSolar</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et quam eu lacus tristique imperdiet.</p>
-            </div>
-        </div>
 
-        <div class="abba">
-            <div class="projeto_slider">
-                <div class="projeto_list">
-                    <div class="projeto_item">
-                        <img src="./projetos_files/ABBA_1.png" alt="Home ABBA">
-                    </div>
-                    <div class="projeto_item">
-                        <img src="./projetos_files/ABBA_2.png" alt="Notícias ABBA">
-                    </div>
-                    <div class="projeto_item">
-                        <img src="./projetos_files/ABBA_3.png" alt="Acadêmicos ABBA">
-                    </div>
-                </div>
-                <div class="projeto_buttons">
-                    <button id="prev">&lt;</button>
-                    <button id="next">&gt;</button>
-                </div>
-                <ul class="projeto_dots">
-                    <li class=""></li>
-                    <li class=""></li>
-                    <li class="active"></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="projeto_text">
-                <h2>Website ABBA</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et quam eu lacus tristique imperdiet.</p>
+                <script>
+                    document.querySelectorAll('.projeto_slider').forEach(slider => {
+                        let currentSlide = 0;
+                        const slides = slider.querySelectorAll('.slide');
+                        const prevButton = slider.querySelector('.prev');
+                        const nextButton = slider.querySelector('.next');
+                        const dots = slider.querySelectorAll('.projeto_dots li');
+
+                        function showSlide(index) {
+                            slides.forEach(slide => slide.classList.remove('active'));
+                            dots.forEach(dot => dot.classList.remove('active'));
+
+                            if (index >= slides.length) currentSlide = 0;
+                            else if (index < 0) currentSlide = slides.length - 1;
+                            else currentSlide = index;
+
+                            slides[currentSlide].classList.add('active');
+                            dots[currentSlide].classList.add('active');
+                        }
+
+                        prevButton.addEventListener('click', () => {
+                            currentSlide--;
+                            showSlide(currentSlide);
+                        });
+
+                        nextButton.addEventListener('click', () => {
+                            currentSlide++;
+                            showSlide(currentSlide);
+                        });
+
+                        dots.forEach((dot, idx) => {
+                            dot.addEventListener('click', () => {
+                            showSlide(idx);
+                            });
+                        });
+
+                        showSlide(currentSlide);
+                    });
+                </script>
             </div>
         </div>
     </section>
