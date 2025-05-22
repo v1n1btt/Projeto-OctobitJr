@@ -339,10 +339,41 @@ header {
     margin: 10px;
     border-radius: 20px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .projeto_dots li.active {
     width: 30px;
+}
+
+.projeto_slider .prev,
+.projeto_slider .next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+    background-color: rgba(118, 27, 239, 0.6); /* Fundo escuro com transparência */
+    color: #dbdad9;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.projeto_slider .prev {
+    left: 20px;
+}
+
+.projeto_slider .next {
+    right: 20px;
 }
 
 footer {
