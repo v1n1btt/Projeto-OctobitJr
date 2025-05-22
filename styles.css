@@ -194,7 +194,7 @@ header {
 }
 
 .equipe_content {
-    background: linear-gradient(0deg, #010101, #1e1e1e, #010101);
+    background: linear-gradient(0deg, #010101, #141414, #010101);
     margin: 0 10rem;
     padding-bottom: 4rem;
     text-align: center;
@@ -229,18 +229,35 @@ header {
 }
 
 .equipe_card {
-
     margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.equipe_photo {
-    width: 200px;
+.equipe_photo_wrapper {
+    width: 210px;
     aspect-ratio: 1;
     clip-path: polygon(
       30% 0%, 70% 0%, 
       100% 30%, 100% 70%, 
       70% 100%, 30% 100%, 
       0% 70%, 0% 30%
+    );
+    background-color: #bbf67e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipe_photo {
+    width: 200px;
+    aspect-ratio: 1;
+    clip-path: polygon(
+        30% 0%, 70% 0%, 
+        100% 30%, 100% 70%, 
+        70% 100%, 30% 100%, 
+        0% 70%, 0% 30%
     );
     overflow: hidden;
     margin: 0 auto;
@@ -254,16 +271,12 @@ header {
     display: block;
 }
 
-#anna_photo {
-    transform: translateX(-20px);
-}
-
 .equipe_info {
     margin-top: 10px;
 }
 
 .projetos_content {
-    background: linear-gradient(0deg, #010101, #1e1e1e, #010101);
+    background: linear-gradient(0deg, #010101, #141414, #010101);
     padding-bottom: 10rem;
     text-align: center;
 }
