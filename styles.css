@@ -27,6 +27,7 @@ header {
     background-color: transparent;
     height: 100px;
     width: 100vw;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,6 +68,7 @@ header {
 
 .main_content_octobit {
     width: 100vw;
+    max-width: 100%;
     height: 100vh;
     background-color: black;
     z-index: 0;
@@ -184,6 +186,7 @@ header {
     position: absolute;
     margin-top: -100px;
     width: 100vw;
+    max-width: 100%;
     height: 100px;
     background: linear-gradient(to top, black, transparent);
     pointer-events: none;
