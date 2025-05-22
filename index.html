@@ -337,40 +337,42 @@
                 <script>
                     document.querySelectorAll('.projeto_slider').forEach(slider => {
                         let currentSlide = 0;
+                        const list = slider.querySelector('.projeto_list');
                         const slides = slider.querySelectorAll('.slide');
                         const prevButton = slider.querySelector('.prev');
                         const nextButton = slider.querySelector('.next');
                         const dots = slider.querySelectorAll('.projeto_dots li');
 
-                        function showSlide(index) {
-                            slides.forEach(slide => slide.classList.remove('active'));
+                        function updateSlide() {
+                            const slideWidth = slider.clientWidth;
+                            list.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+
                             dots.forEach(dot => dot.classList.remove('active'));
-
-                            if (index >= slides.length) currentSlide = 0;
-                            else if (index < 0) currentSlide = slides.length - 1;
-                            else currentSlide = index;
-
-                            slides[currentSlide].classList.add('active');
-                            dots[currentSlide].classList.add('active');
+                            if (dots[currentSlide]) {
+                                dots[currentSlide].classList.add('active');
+                            }
                         }
 
                         prevButton.addEventListener('click', () => {
-                            currentSlide--;
-                            showSlide(currentSlide);
+                            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                            updateSlide();
                         });
 
                         nextButton.addEventListener('click', () => {
-                            currentSlide++;
-                            showSlide(currentSlide);
+                            currentSlide = (currentSlide + 1) % slides.length;
+                            updateSlide();
                         });
 
-                        dots.forEach((dot, idx) => {
+                        dots.forEach((dot, index) => {
                             dot.addEventListener('click', () => {
-                            showSlide(idx);
+                                currentSlide = index;
+                                updateSlide();
                             });
                         });
 
-                        showSlide(currentSlide);
+                        window.addEventListener('resize', updateSlide);
+
+                        updateSlide(currentSlide);
                     });
                 </script>
             </div>

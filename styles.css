@@ -302,28 +302,26 @@ header {
     width: 910px;
     margin: 30px auto;
     position: relative;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 .projeto_list {
     display: flex;
     width: 100%;
-    height: 100%;
+    transition: transform 0.5s ease;
 }
 
 .slide {
-    width: 910px;
+    min-width: 100%;
     margin: auto auto;
-    display: none;
     object-fit: cover;
-}
-
-.slide.active {
-    display: block;
+    border-radius: 30px;
 }
 
 .projeto_dots {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 0;
     color: #761bef;
     width: 100%;
