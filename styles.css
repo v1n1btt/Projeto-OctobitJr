@@ -120,7 +120,7 @@ header {
     height: auto;
 }
 
-#sobre_content {
+.sobre_content {
     background: linear-gradient(0deg, #1e1e1e, #010101);
     width: 60%;
     flex: 1;
@@ -190,7 +190,7 @@ header {
     z-index: 2;
 }
 
-#equipe_content {
+.equipe_content {
     background: linear-gradient(0deg, #010101, #1e1e1e, #010101);
     margin: 0 10rem;
     padding-bottom: 4rem;
@@ -210,7 +210,7 @@ header {
 }
 
 .equipe_title h1 {
-    background: linear-gradient(90deg, #4e12f9 ,#bbf67e);
+    background: linear-gradient(90deg, #761bef, #4e12f9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -255,6 +255,91 @@ header {
 
 .equipe_info {
     margin-top: 10px;
+}
+
+.projetos_content {
+    background: linear-gradient(0deg, #010101, #1e1e1e, #010101);
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.projetos_title h1 {
+    background: linear-gradient(90deg, #761bef, #4e12f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding-top: 50px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    font-style: italic;
+    display: inline-block;
+}
+
+.projetos_container {
+    color: #dbdad9;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.fsolar {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.abba {
+    padding-top: 50px;
+}
+
+.projeto_slider {
+    width: 910px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.projeto_list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 910px;
+    margin: auto auto;
+    display: none;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.projeto_dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #761bef;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.projeto_dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #761bef;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.projeto_dots li.active {
+    width: 30px;
 }
 
 footer {
