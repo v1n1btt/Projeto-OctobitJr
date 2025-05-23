@@ -508,13 +508,31 @@ input, textarea {
 }
 
 .endereco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: left;
-    margin-left: 4rem;
+    flex-wrap: wrap;
+    margin-left: 10rem;
+    margin-right: 10rem;
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .contato_endereco {
-    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.contato_endereco_title {
+    margin-bottom: 1rem;
+    margin-right: 4rem;
+}
+
+iframe {
+    width: 30vw;
+    aspect-ratio: 1/1;
+    margin-left: 4rem;
+    border-radius: 50px;
 }
 
 footer {
