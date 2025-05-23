@@ -275,10 +275,17 @@ header {
     margin-top: 10px;
 }
 
+#projetos {
+    background: linear-gradient(0deg, #010101, #4e12f9, #6216c7, #3b0d77, #010101);
+}
+
 .projetos_content {
     background: linear-gradient(0deg, #010101, #141414, #010101);
+    margin: 0 10rem;
     padding-bottom: 10rem;
     text-align: center;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
 .projetos_title h1 {
