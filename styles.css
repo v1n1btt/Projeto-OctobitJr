@@ -405,15 +405,29 @@ header {
 
 #contato {
     background: linear-gradient(0deg, #010101, #4e12f9, #6216c7, #3b0d77, #010101);
+    padding: 10rem;
+}
+
+.contato_content::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50px;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
 }
 
 .contato_content {
     background: linear-gradient(0deg, #010101, #141414, #010101);
-    margin: 0 10rem;
+    position: relative;
     padding-bottom: 10rem;
+    border-radius: 50px;
     text-align: center;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    z-index: 2;
 }
 
 .contato_title h1 {
@@ -449,7 +463,11 @@ header {
     position: relative;
     width: 40%;
     max-width: 100%;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 30px;
     flex-direction: column;
+    background-color: #6d6d6c;
 }
 
 .text_input {
@@ -466,7 +484,10 @@ input {
 }
 
 input, textarea {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
     margin-left: 30px;
+    border-radius: 10px;
     width: 100%;
     max-width: 100%;
     resize: none;
@@ -484,6 +505,16 @@ input, textarea {
 
 .contact_input_email {
     width: 90%;
+}
+
+.endereco {
+    text-align: left;
+    margin-left: 4rem;
+    margin-top: 4rem;
+}
+
+.contato_endereco {
+    margin-top: 1rem;
 }
 
 footer {
