@@ -23,9 +23,17 @@
     padding: 0px 20px;
 }
 
+h1:not(#endereco_title):not(#social_title) {
+    font-size: 52px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
 header {
     background-color: transparent;
-    height: 100px;
+    height: 10vh;
+    min-height: 50px;
     width: 100vw;
     max-width: 100%;
     display: flex;
@@ -42,7 +50,9 @@ header {
 }
 
 .nav_logo_a {
-    width: 100px;
+    display: flex;
+    height: 10vh;
+    min-height: 50px;
     left: 50px;
     object-fit: contain;
     float: left;
@@ -51,6 +61,8 @@ header {
 
 .nav_logo {
     width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     object-fit: contain;
     float: left;
     position: relative;
@@ -152,14 +164,10 @@ header {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    font-size: 52px;
-    font-style: italic;
     display: inline-block;
     width: fit-content;
     line-height: 1.6em;
-    margin-bottom: 4rem;
+    margin-bottom: 5%;
     padding-top: 3rem;
 }
 
@@ -224,7 +232,7 @@ header {
     display: grid;
     margin-left: 10rem;
     margin-right: 10rem;
-    margin-top: 4rem;
+    margin-top: 5%;
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -235,15 +243,11 @@ header {
     background-clip: text;
     color: transparent;
     padding-top: 50px;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    font-size: 52px;
-    font-style: italic;
     display: inline-block;
 }
 
 .equipe_card {
-    margin-bottom: 45px;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,10 +313,6 @@ header {
     background-clip: text;
     color: transparent;
     padding-top: 50px;
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    font-size: 52px;
-    font-style: italic;
     display: inline-block;
 }
 
@@ -359,7 +359,7 @@ header {
 
 .projeto_dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 0;
     color: #761bef;
     width: 100%;
@@ -460,17 +460,13 @@ header {
     background-clip: text;
     color: transparent;
     margin-bottom: 3rem;
-    font-family: "Rubik", sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
-    font-style: italic;
 }
 
 .contato_container {
     color: #dbdad9;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
@@ -487,6 +483,10 @@ header {
     gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+.contact_text {
+    width: 80px;
 }
 
 .contato_form {
@@ -510,7 +510,7 @@ header {
 .contato_form input,
 .contato_form textarea {
     padding: 1rem;
-    width: 80%;
+    width: 100%;
     border: none;
     border-radius: 10px;
     background: #444;
@@ -532,12 +532,12 @@ textarea {
     resize: none;
 }
 
-.contact_button {
+#contact_button {
     padding: 1rem;
     border: none;
     border-radius: 10px;
+    width: 30%;
     margin: auto auto;
-    background: linear-gradient(90deg, #761bef, #4e12f9);
     color: white;
     font-family: "Rubik", sans-serif;
     font-size: 1rem;
@@ -546,7 +546,7 @@ textarea {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.contact_button:hover {
+#contact_button:hover {
     background: linear-gradient(90deg, #4e12f9, #761bef);
     transform: translateY(-2px);
 }
@@ -562,12 +562,15 @@ textarea {
 }
 
 .contato_endereco {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .contato_endereco_title {
-    margin-bottom: 1rem;
     margin-right: 4rem;
+}
+
+#endereco_title {
+    font-size: 24px;
 }
 
 .maps_iframe {
@@ -590,6 +593,10 @@ iframe {
     border-radius: 50px;
 }
 
+#social_title {
+    font-size: 24px;
+}
+
 .social_media {
     display: flex;
     justify-content: center;
@@ -600,19 +607,26 @@ iframe {
     width: fit-content;
     justify-content: center;
     list-style: none;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 footer {
     background-color: #080808;
     font-family: "Open Sans", sans-serif;
     color: #dbdad9;
+    font-size: 18px;
     text-align: center;
     padding-bottom: 20px;
 }
 
 .index_footer_logo {
     padding: 10px 0px;
+}
+
+.index_footer_logo img {
+    width: 18vw;
+    min-width: 200px;
+    height: auto;
 }
 
 @media screen and (max-width: 1400px) {
@@ -643,6 +657,10 @@ footer {
     .contato_content {
         max-width: 100%;
     }
+
+    .index_footer_logo img {
+        width: 25vw;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -653,15 +671,46 @@ footer {
         -webkit-mask-image: none;
         mask-image: none;
     }
+    #objetivos {
+        margin-left: 10%;
+    }
 }
 
 @media screen and (max-width: 1100px){
+    header {
+        justify-content: center;
+    }
+
+    .nav_bar_desktop {
+        display: none;
+    }
+
+    .nav_logo_a {
+        left: 0;
+    }
+
     .equipe_container {
         font-size: 12px;
     }
 
-    .equipe_title h1 {
-        font-size: 35px;
+    h1:not(#endereco_title):not(#social_title) {
+        font-size: 40px;
+    }
+
+    .sobre_title h1, .equipe_title h1, .projetos_title h1, .contato_title h1{
+        margin-bottom: 2%;
+    }
+
+    #endereco_title, #social_title, h2 {
+        font-size: 20px;
+    }
+
+    .social_media_container img {
+        width: 50px;
+    }
+
+    .maps_iframe {
+        width: 60%;
     }
 }
 
@@ -679,10 +728,22 @@ footer {
         width: 20vw;
     }
 
+    #contato {
+        padding: 8rem 0.5rem;
+    }
+
+    .contato_form {
+        max-width: 100%;
+    }
+
     .maps_iframe {
         margin-left: 0;
         min-width: 0;
-        width: 80%;
+        width: 70%;
+    }
+
+    .index_footer_logo img {
+        width: 30vw;
     }
 }
 
@@ -690,7 +751,6 @@ footer {
     .equipe_container {
         margin-left: 2rem;
         margin-right: 2rem;
-        grid-template-columns: repeat(auto-fit, 1fr);
         justify-content: center;
     }
 
@@ -702,15 +762,40 @@ footer {
     #name {
         margin-top: 0;
     }
+
+    .index_footer_logo img {
+        width: 40vw;
+    }
+
+    .maps_iframe {
+        margin-left: 0;
+        min-width: 0;
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .projetos_content {
-        margin: 0 0;
+    h1:not(#endereco_title):not(#social_title){
+        font-size: 35px;
     }
 
-    .projeto_slider {
-        min-width: 400px;
+    .sobre_title h1, .equipe_title h1, .projetos_title h1, .contato_title h1{
+        margin-bottom: 1rem;
+    }
+
+    .sobre_body {
+        margin-left: 2rem;
+        margin-right: 3rem;
+    }
+
+    .equipe_content, .projetos_container {
+        margin: 0 1%;
+        -webkit-mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+    }
+
+    .projetos_content {
+        margin: 0 0;
     }
 
     .contato_form {
@@ -723,7 +808,148 @@ footer {
         border-radius: 30px;
     }
 
-    .contato_title h1 {
-        font-size: 2.2rem;
+    footer, p, li, label {
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    footer, p, li, label {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .equipe_container {
+        font-size: 10px;
+    }
+
+    .equipe_photo_wrapper {
+        width: calc(20vw + 5px);
+    }
+
+    .projeto_slider{
+        min-width: 400px;
+        border: 2px solid transparent;
+    }
+
+    .projeto_slider .prev,
+    .projeto_slider .next {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .projeto_dots {
+        bottom: 0px;
+    }
+
+    #contact_button {
+        width: 70%;
+    }
+
+    .maps_iframe {
+        margin-left: 0;
+        min-width: 0;
+        width: 90%;
+        border: 2px solid transparent;
+    }
+
+    .index_footer_logo img {
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #main_octobit_logo {
+        min-width: 300px;
+    }
+
+    .main_container img {
+        width: 40px;
+    }
+
+    .sobre_body {
+        margin-left: 1rem;
+        margin-right: 1.5rem;
+    }
+
+    .equipe_container {
+        font-size: 8px;
+    }
+
+    footer, p, li {
+        font-size: 14px;
+    }
+
+    #endereco_title, #social_title, h2 {
+        font-size: 18px;
+    }
+
+    .maps_iframe {
+        margin-left: 0;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .social_media_container img {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer, p, li {
+        font-size: 13px;
+    }
+
+    .projeto_slider{
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    h1:not(#endereco_title):not(#social_title){
+        font-size: 30px;
+    }
+
+    .sobre_title h1, .equipe_title h1, .projetos_title h1, .contato_title h1{
+        margin-bottom: 0.5rem;
+    }
+
+    .equipe_container {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 7px;
+    }
+
+    .equipe_role {
+        font-size: 12px
+    }
+
+    .projeto_slider{
+        min-width: 300px;
+    }
+
+    .projeto_slider .prev,
+    .projeto_slider .next {
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        padding: 0 0;
+    }
+
+    #endereco_title, #social_title, h2 {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .equipe_role {
+        font-size: 10px;
     }
 }
