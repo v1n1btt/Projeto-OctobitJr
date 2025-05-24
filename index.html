@@ -8,13 +8,6 @@
 </head>
 
 <body>
-    <script>
-        window.addEventListener("scroll", function(){
-            let menu = document.querySelector('#nav_bar')
-            menu.classList.toggle('scrolling', window.scrollY>0)
-        })
-    </script>
-
     <header class="header" id="nav_bar">
         <a href="./index.html" class="nav_logo_a"><img src="./img/Logo_OCTOBIT_Logo_Branco_VERTICAL.png" alt="Logo branco vertical da Octobit Jr." class="nav_logo"></a>
 
@@ -95,6 +88,27 @@
                 ajustarCanvas();
                 iniciarMatrix();
             };
+        </script>
+
+        <script>
+            const header = document.querySelector('header');
+            const matrix = document.querySelector('#matrix');
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (!entry.isIntersecting) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                },
+                {
+                    root: null,
+                    threshold: 0,
+                }
+            );
+
+            observer.observe(matrix);
         </script>
 
     </section>

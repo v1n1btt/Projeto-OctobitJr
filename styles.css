@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .nav_bar_desktop {
@@ -10,11 +11,29 @@
 }
 
 .nav_bar_desktop a, .nav_bar_desktop li {
+    position: relative;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #dbdad9;
     text-decoration: none;
+}
+
+.nav_bar_desktop a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #761bef, #4e12f9);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav_bar_desktop a:hover::after {
+    transform: scaleX(1);
 }
 
 .nav_bar_desktop li {
@@ -28,6 +47,7 @@ h1:not(#endereco_title):not(#social_title) {
     font-family: "Rubik", sans-serif;
     font-weight: 600;
     font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -43,9 +63,10 @@ header {
     top: 0px;
     z-index: 3;
     user-select: none;
+    transition: background-color 0.5s ease;
 }
 
-#nav_bar.scrolling {
+#nav_bar.scrolled {
     background-color: #080808;
 }
 
@@ -82,6 +103,29 @@ header {
 
 #main_octobit_logo {
     min-width: 400px;
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: fallFade 1.5s ease-out forwards;
+    transition: filter 0.3s ease;
+}
+
+@keyframes fallFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main_octobit_logo:hover {
+    filter: drop-shadow(0 0 4px #761bef);
 }
 
 .main_wrapper img {
@@ -91,6 +135,11 @@ header {
 .main_wrapper a {
     display: flex;
     justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.main_wrapper a:hover {
+    transform: translateY(-5px);
 }
 
 .main_content_octobit {
@@ -262,7 +311,7 @@ header {
       70% 100%, 30% 100%, 
       0% 70%, 0% 30%
     );
-    background: linear-gradient(90deg, #bbf67e, #5d7b3f, #bbf67e);
+    background: linear-gradient(90deg, #39FF14, #0aff70, #39FF14);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,7 +389,7 @@ header {
     border: 4px solid transparent;
     border-radius: 50px;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(90deg, #bbf67e, #5d7b3f, #bbf67e) border-box;
+                linear-gradient(90deg, #39FF14, #0aff70, #39FF14) border-box;
     overflow: hidden;
 }
 
@@ -393,7 +442,7 @@ header {
     line-height: 1;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(118, 27, 239, 0.6); /* Fundo escuro com transparência */
+    background-color: rgba(118, 27, 239, 0.6);
     color: #dbdad9;
     border: none;
     font-size: 24px;
@@ -401,7 +450,11 @@ header {
     cursor: pointer;
     border-radius: 50%;
     z-index: 1;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.projeto_slider .prev:hover, .projeto_slider .next:hover {
+    transform: translateY(calc(-50% - 5px));
 }
 
 .projeto_slider .prev {
@@ -419,7 +472,7 @@ header {
 }
 
 #contato {
-    background: linear-gradient(135deg, #010101, #4e12f9, #6216c7, #3b0d77, #010101);
+    background: linear-gradient(0deg, #010101, #4e12f9, #6216c7, #3b0d77, #010101);
     padding: 8rem 2rem;
     display: flex;
     justify-content: center;
@@ -549,6 +602,13 @@ textarea {
 #contact_button:hover {
     background: linear-gradient(90deg, #4e12f9, #761bef);
     transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(118, 27, 239, 0.6);
+}
+
+.contato_form input,
+.contato_form textarea,
+#contact_button {
+    box-shadow: 0 3px 6px rgba(118, 27, 239, 0.6);
 }
 
 .endereco {
@@ -584,7 +644,7 @@ textarea {
     border: 4px solid transparent;
     border-radius: 50px;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(90deg, #bbf67e, #5d7b3f, #bbf67e) border-box;
+                linear-gradient(90deg, #39FF14, #0aff70, #39FF14) border-box;
 }
 
 iframe {
@@ -608,6 +668,16 @@ iframe {
     justify-content: center;
     list-style: none;
     margin-top: 1rem;
+}
+
+.social_media a {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social_media a:hover {
+    transform: translateY(-5px);
 }
 
 footer {
