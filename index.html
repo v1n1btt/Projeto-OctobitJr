@@ -417,25 +417,21 @@
                 <p>Preencha o formulário abaixo e entraremos em contato.</p>
                 <div class="contato_box">
                     <form class="contato_form">
-                        <br>
-                        <div class="text_input">
+                        <div class="text_input" id="name">
                             <label for="name" class="contact_text">Nome:</label>
-                            <input type="text" id="name" name="fullname" required class="contact_input_name" placeholder="Seu nome completo">
+                            <input type="text" name="fullname" required class="contact_input_name" placeholder="Seu nome completo">
                         </div>
-                        <br><br>
-                        <div class="text_input">
+                        <div class="text_input" id="email">
                             <label for="email" class="contact_text">E-mail:</label>
-                            <input type="email" id="email" name="email" required class="contact_input_email" placeholder="email@exemplo.com">
+                            <input type="email" name="email" required class="contact_input_email" placeholder="email@exemplo.com">
                         </div>
-                        <br><br>
-                        <div class="text_input">
+                        <div class="text_input" id="phone">
                             <label for="phone" class="contact_text">Telefone:</label>
-                            <input type="tel" id="phone" name="phone" required class="contact_input_phone" placeholder="(__) _____-____">
+                            <input type="tel" name="phone" required class="contact_input_phone" placeholder="(__) _____-____">
                         </div>
-                        <br><br>
-                        <div class="text_input">
+                        <div class="text_input" id="subject">
                             <label for="subject" class="contact_text">Assunto:</label>
-                            <textarea id="subject" name="subject" rows="5" required placeholder="Como podemos te ajudar?"></textarea>
+                            <textarea name="subject" rows="5" required placeholder="Como podemos te ajudar?"></textarea>
                         </div>
                         <br>
                         <input type="submit" value="ENVIAR" class="contact_button">

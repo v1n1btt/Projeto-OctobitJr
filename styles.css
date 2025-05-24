@@ -335,7 +335,7 @@ header {
 .projeto_slider {
     width: 50vw;
     min-width: 500px;
-    margin: 30px auto;
+    margin: 20px auto;
     position: relative;
     border: 4px solid transparent;
     border-radius: 50px;
@@ -392,8 +392,6 @@ header {
     align-items: center;
     line-height: 1;
     top: 50%;
-    width: 3rem;
-    height: 3rem;
     transform: translateY(-50%);
     background-color: rgba(118, 27, 239, 0.6); /* Fundo escuro com transparência */
     color: #dbdad9;
@@ -451,7 +449,7 @@ header {
     text-align: center;
     z-index: 2;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    max-width: 900px;
+    max-width: 60%;
     width: 100%;
 }
 
@@ -485,6 +483,7 @@ header {
 
 .text_input {
     display: flex;
+    margin-top: 1.5rem;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -494,7 +493,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 500px;
+    max-width: 80%;
     margin-top: 2rem;
     padding: 2rem;
     border-radius: 20px;
@@ -511,7 +510,7 @@ header {
 .contato_form input,
 .contato_form textarea {
     padding: 1rem;
-    margin-bottom: 1rem;
+    width: 80%;
     border: none;
     border-radius: 10px;
     background: #444;
@@ -533,10 +532,11 @@ textarea {
     resize: none;
 }
 
-.contato_form button {
+.contact_button {
     padding: 1rem;
     border: none;
     border-radius: 10px;
+    margin: auto auto;
     background: linear-gradient(90deg, #761bef, #4e12f9);
     color: white;
     font-family: "Rubik", sans-serif;
@@ -546,25 +546,9 @@ textarea {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.contato_form button:hover {
+.contact_button:hover {
     background: linear-gradient(90deg, #4e12f9, #761bef);
     transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .contato_form {
-        width: 100%;
-        padding: 1.5rem;
-    }
-
-    .contato_content {
-        padding: 2rem 1rem;
-        border-radius: 30px;
-    }
-
-    .contato_title h1 {
-        font-size: 2.2rem;
-    }
 }
 
 .endereco {
@@ -573,8 +557,6 @@ textarea {
     align-items: center;
     text-align: left;
     flex-wrap: wrap;
-    margin-left: 5rem;
-    margin-right: 5rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
@@ -590,11 +572,12 @@ textarea {
 
 .maps_iframe {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 4rem;
     width: 40vw;
     min-width: 400px;
     aspect-ratio: 3/2;
-    margin-left: 4rem;
     border: 4px solid transparent;
     border-radius: 50px;
     background: linear-gradient(white, white) padding-box,
@@ -654,7 +637,11 @@ footer {
     .maps_iframe {
         margin-left: 0;
         min-width: 0;
-        width: 50vw;
+        width: 50%;
+    }
+
+    .contato_content {
+        max-width: 100%;
     }
 }
 
@@ -691,13 +678,52 @@ footer {
     .equipe_photo {
         width: 20vw;
     }
+
+    .maps_iframe {
+        margin-left: 0;
+        min-width: 0;
+        width: 80%;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {    
     .equipe_container {
         margin-left: 2rem;
         margin-right: 2rem;
         grid-template-columns: repeat(auto-fit, 1fr);
         justify-content: center;
+    }
+
+    .text_input {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #name {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projetos_content {
+        margin: 0 0;
+    }
+
+    .projeto_slider {
+        min-width: 400px;
+    }
+
+    .contato_form {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .contato_content {
+        padding: 2rem 1rem;
+        border-radius: 30px;
+    }
+
+    .contato_title h1 {
+        font-size: 2.2rem;
     }
 }
