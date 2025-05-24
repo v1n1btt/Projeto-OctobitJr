@@ -56,8 +56,9 @@ header {
     position: relative;
 }
 
-.wrapper {
+.main_wrapper {
     position: absolute;
+    width: 50vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -65,6 +66,19 @@ header {
     flex-direction: column;
     align-items: center;
     z-index: 2;
+}
+
+#main_octobit_logo {
+    min-width: 400px;
+}
+
+.main_wrapper img {
+    width: 80%;
+}
+
+.main_wrapper a {
+    display: flex;
+    justify-content: center;
 }
 
 .main_content_octobit {
@@ -77,12 +91,9 @@ header {
 
 .main_content_octobit ul {
     display: flex;
-    margin: auto auto;
     padding-top: 30px;
-    justify-content: center;
-    align-items: center;
     list-style-type: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .main_content_octobit li {
@@ -125,7 +136,6 @@ header {
 
 .sobre_content {
     background: linear-gradient(0deg, #1e1e1e, #010101);
-    width: 60%;
     flex: 1;
 
     -webkit-mask-image: linear-gradient(to right, #1e1e1e 95%, transparent);
@@ -171,7 +181,7 @@ header {
 }
 
 #sobre_logo img {
-    max-width: 100%;
+    width: 40vw;
     height: auto;
 }
 
@@ -199,7 +209,7 @@ header {
 
 .equipe_content {
     background: linear-gradient(0deg, #010101, #141414, #010101);
-    margin: 0 10rem;
+    margin: 0 5%;
     padding-bottom: 4rem;
     text-align: center;
     -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
@@ -285,7 +295,7 @@ header {
 
 .projetos_content {
     background: linear-gradient(0deg, #010101, #141414, #010101);
-    margin: 0 10rem;
+    margin: 0 5%;
     padding-bottom: 10rem;
     text-align: center;
     -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
@@ -324,6 +334,7 @@ header {
 
 .projeto_slider {
     width: 50vw;
+    min-width: 500px;
     margin: 30px auto;
     position: relative;
     border: 4px solid transparent;
@@ -401,6 +412,12 @@ header {
 
 .projeto_slider .next {
     right: 20px;
+}
+
+.projeto_text {
+    width: fit-content;
+    margin: auto auto;
+    padding: 0 40px;
 }
 
 #contato {
@@ -530,9 +547,9 @@ input, textarea {
 
 .maps_iframe {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30vw;
+    width: 40vw;
+    min-width: 400px;
     aspect-ratio: 3/2;
     margin-left: 4rem;
     border: 4px solid transparent;
@@ -547,8 +564,14 @@ iframe {
     border-radius: 50px;
 }
 
+.social_media {
+    display: flex;
+    justify-content: center;
+}
+
 .social_media_container {
     display: flex;
+    width: fit-content;
     justify-content: center;
     list-style: none;
     margin-top: 2rem;
@@ -564,4 +587,47 @@ footer {
 
 .index_footer_logo {
     padding: 10px 0px;
+}
+
+@media screen and (max-width: 1400px) {
+    .equipe_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .endereco {
+        flex-direction: column;
+    }
+
+    .maps_iframe {
+        margin-left: 0;
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #sobre {
+        flex-direction: column;
+    }
+    .sobre_content {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .equipe_container {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .equipe_container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        justify-content: center;
+    }
 }
