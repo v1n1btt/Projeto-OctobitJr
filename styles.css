@@ -483,6 +483,13 @@ header {
     margin-bottom: 2rem;
 }
 
+.text_input {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
 .contato_form {
     display: flex;
     flex-direction: column;
@@ -518,6 +525,12 @@ header {
 .contato_form textarea:focus {
     outline: none;
     background: #555;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    resize: none;
 }
 
 .contato_form button {
