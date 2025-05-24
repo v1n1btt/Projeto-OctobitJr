@@ -513,8 +513,8 @@ input, textarea {
     align-items: center;
     text-align: left;
     flex-wrap: wrap;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
@@ -528,10 +528,22 @@ input, textarea {
     margin-right: 4rem;
 }
 
-iframe {
+.maps_iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30vw;
-    aspect-ratio: 1/1;
+    aspect-ratio: 3/2;
     margin-left: 4rem;
+    border: 4px solid transparent;
+    border-radius: 50px;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(90deg, #bbf67e, #5d7b3f, #bbf67e) border-box;
+}
+
+iframe {
+    min-width: 100%;
+    height: 100%;
     border-radius: 50px;
 }
 
