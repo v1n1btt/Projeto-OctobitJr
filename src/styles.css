@@ -15,6 +15,7 @@ header {
     top: 0px;
     left: 0px;
     user-select: none;
+    z-index: 3;
 }
 
 .nav_logo_a {
@@ -77,6 +78,14 @@ header {
     transform: scaleX(1);
 }
 
+.splash-screen-octobit {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 0;
+}
+
 .main_wrapper {
     position: absolute;
     width: 50vw;
@@ -137,4 +146,77 @@ ul {
     flex-wrap: wrap;
     padding: 0;
     margin-top: 2rem;
+}
+
+#sobre ul {
+    list-style-type: disc;
+}
+
+#sobre {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    background: linear-gradient(0deg, #010101, #4e12f9, #6216c7, #3b0d77, #010101);
+    z-index: 1;
+}
+
+#sobre_logo {
+    max-width: 1000px;
+    height: auto;
+}
+
+.sobre_content {
+    background: linear-gradient(0deg, #1e1e1e, #010101);
+    flex: 1;
+
+    -webkit-mask-image: linear-gradient(to right, #1e1e1e 95%, transparent);
+    mask-image: linear-gradient(to right, #1e1e1e 95%, transparent);
+}
+
+.sobre_title {
+    text-align: center;
+}
+
+.sobre_title h1 {
+    background: linear-gradient(90deg, #761bef, #4e12f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    width: fit-content;
+    line-height: 1.6em;
+    margin-bottom: 5%;
+    padding-top: 3rem;
+}
+
+.sobre_body {
+    color: #dbdad9;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 2em;
+    padding-bottom: 1.6em;
+    margin-left: 4rem;
+    margin-right: 6rem;
+    flex: 1;
+}
+
+#sobre_text {
+    text-indent: 3rem;
+}
+
+#sobre_logo img {
+    width: 40vw;
+    height: auto;
+}
+
+#objetivos {
+    padding-top: 2rem;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
 }

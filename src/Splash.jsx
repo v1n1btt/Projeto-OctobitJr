@@ -5,7 +5,6 @@ import linkedinLogo from "./assets/img/icon-linkedin-white.png"
 export default function () {
     return (
         <>
-            <canvas id="matrix"/>
             <div className="main_wrapper">
                 <img src={octobitLogo} alt="Logo branco horizontal da Octobit Jr." id="main_octobit_logo" />
                 

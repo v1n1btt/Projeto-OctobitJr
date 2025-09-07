@@ -59,11 +59,10 @@ export default function MatrixBackground() {
         <canvas
             ref={canvasRef}
             style={{
-                position: "fixed",
+                position: "absolute",
                 top: 0,
                 left: 0,
-                zIndex: -1,
-                background: "black",
+                zIndex: 1,
             }}
         />
     );
