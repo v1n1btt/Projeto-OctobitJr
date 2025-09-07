@@ -76,3 +76,65 @@ header {
 .nav_bar_desktop a:hover::after {
     transform: scaleX(1);
 }
+
+.main_wrapper {
+    position: absolute;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+#main_octobit_logo {
+    min-width: 400px;
+    opacity: 0;
+    transform: translateY(-200px);
+    animation: fallFade 1.5s ease-out forwards;
+    transition: filter 0.3s ease;
+}
+
+@keyframes fallFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main_octobit_logo:hover {
+    filter: drop-shadow(0 0 4px #761bef);
+}
+
+.main_wrapper img {
+    width: 80%;
+}
+
+.main_wrapper a {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.main_wrapper a:hover {
+    transform: translateY(-5px);
+}
+
+ul {
+    display: flex;
+    padding-top: 30px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 2rem;
+}
