@@ -54,8 +54,29 @@ export default function MatrixBackground() {
         };
     }, []);
 
+    useEffect(() => {
+        const header = document.querySelector('header');
+        const matrix = document.querySelector('#matrix');
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            },
+            {
+                root: null,
+                threshold: 0,
+            }
+        );
+
+        observer.observe(matrix);
+    }, []);
+
     return (
-        <canvas
+        <canvas id="matrix"
             ref={canvasRef}
             style={{
                 position: "absolute",

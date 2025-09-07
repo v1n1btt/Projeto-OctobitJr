@@ -31,7 +31,7 @@ export default function () {
                 <Card src={FelipeMiotto} alt="Felipe Miotto" name="Felipe Miotto" role="Membro Projetos e Financeiro"/>
                 <Card src={FilipeAccorsi} alt="Filipe Accorsi" name="Filipe Accorsi" role="Membro Projetos e Comercial"/>
                 <Card src={IgorPio} alt="Igor Pio" name="Igor Pio" role="Membro de Projetos e Recursos Humanos"/>
-                <Card src={IsabelaSuemi} alt="Isabela Suemi" name="Isabela Suemi" role="Membro Projetos e Marketing"/>
+                <Card src={IsabelaSuemi} alt="Isabela Suemi Aoki" name="Isabela Suemi Aoki" role="Membro Projetos e Marketing"/>
                 <Card src={JoaoRoberto} alt="João Roberto Neto" name="João Roberto Neto" role="Membro Projetos e Marketing"/>
                 <Card src={NataliaPrata} alt="Natália Prata" name="Natália Prata" role="Membro Projetos e Marketing"/>
                 <Card src={RodrigoLigeiro} alt="Rodrigo Ligeiro" name="Rodrigo Ligeiro" role="Membro Projetos"/>
