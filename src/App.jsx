@@ -7,6 +7,7 @@ import About from './About'
 import Team from './Team'
 import Projects from './Projects'
 import Contact from './Contact'
+import Footer from './Footer'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
       <section id="equipe"><Team/></section>
       <section id="projetos"><Projects/></section>
       <section id="contato"><Contact/></section>
+      <Footer/>
     </>
   )
 }

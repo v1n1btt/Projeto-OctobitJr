@@ -658,3 +658,22 @@ iframe {
 .social_media a:hover {
     transform: translateY(-5px);
 }
+
+footer {
+    background-color: #080808;
+    font-family: "Open Sans", sans-serif;
+    color: #dbdad9;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.index_footer_logo {
+    padding: 10px 0px;
+}
+
+.index_footer_logo img {
+    width: 18vw;
+    min-width: 200px;
+    height: auto;
+}
