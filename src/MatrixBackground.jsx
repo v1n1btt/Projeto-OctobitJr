@@ -22,15 +22,14 @@ export default function MatrixBackground() {
         let drops = Array(columns).fill(0).map(() => Math.random() * -canvas.height / fontSize);
 
         // Mudar cor do fundo
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "#010101";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         function draw() {
             // Mudar cor do rastro
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillStyle = "rgba(1, 1, 1, 0.05)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = "#0F0";
             ctx.font = `${fontSize}px monospace`;
 
             drops.forEach((y, i) => {

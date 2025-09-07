@@ -3,6 +3,7 @@ import Header from './Header'
 import Splash from './Splash'
 import MatrixBackground from './MatrixBackground'
 import About from './About'
+import Team from './Team'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
         <MatrixBackground />
       </section>
       <About />
+      <section id="equipe"><Team /></section>
     </>
   )
 }
