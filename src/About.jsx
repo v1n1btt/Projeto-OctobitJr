@@ -1,10 +1,19 @@
+import { useEffect, useRef } from "react"
 import whiteOctobitLogo from "./assets/img/Logo_OCTOBIT_Logo_Branco_SIMBOLO.png"
 
-export default function () {
+export default function (props) {
+    const aboutRef = useRef(null);
+
+    useEffect(() => {
+        const about = aboutRef.current;
+
+        about.style.backgroundColor = props.darkMode ? '#080808' : '#dbdad9';
+    }, [props.darkMode])
+
     return (
         <section id="sobre">        
-            <div className="sobre_content">
-                <div className="sobre_body">
+            <div className="sobre_content" ref={aboutRef}>
+                <div className="sobre_body" style={{color: props.darkMode ? '#dbdad9' : '#080808'}}>
                     <div className="sobre_title"><h1>Sobre nós</h1></div>
                     
                     <p id="sobre_text">

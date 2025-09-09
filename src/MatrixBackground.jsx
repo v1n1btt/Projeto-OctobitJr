@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function MatrixBackground() {
+export default function MatrixBackground(props) {
     const canvasRef = useRef(null);
 
     useEffect(() => {
@@ -21,13 +21,11 @@ export default function MatrixBackground() {
         const columns = Math.floor(canvas.width / fontSize);
         let drops = Array(columns).fill(0).map(() => Math.random() * -canvas.height / fontSize);
 
-        // Mudar cor do fundo
-        ctx.fillStyle = "#010101";
+        ctx.fillStyle = props.darkMode === true ? "#010101" : "#dbdad9";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         function draw() {
-            // Mudar cor do rastro
-            ctx.fillStyle = "rgba(1, 1, 1, 0.05)";
+            ctx.fillStyle = props.darkMode === true ? "rgba(1, 1, 1, 0.05)" : "rgba(219, 218, 217, 0.25)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             ctx.font = `${fontSize}px monospace`;
@@ -52,28 +50,7 @@ export default function MatrixBackground() {
             clearInterval(interval);
             window.removeEventListener("resize", resize);
         };
-    }, []);
-
-    useEffect(() => {
-        const header = document.querySelector('header');
-        const matrix = document.querySelector('#matrix');
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (!entry.isIntersecting) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            },
-            {
-                root: null,
-                threshold: 0,
-            }
-        );
-
-        observer.observe(matrix);
-    }, []);
+    }, [props.darkMode]);
 
     return (
         <canvas id="matrix"

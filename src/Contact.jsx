@@ -1,33 +1,45 @@
+import { useState, useEffect, useRef } from "react"
 import instagramLogo from "./assets/img/icon-instagram-white.png"
+import instagramLogoBlack from "./assets/img/icon-instagram-black.png"
 import linkedinLogo from "./assets/img/icon-linkedin-white.png"
+import linkedinLogoBlack from "./assets/img/icon-linkedin-black.png"
 
-export default function () {
+export default function (props) {
+    const contactRef = useRef(null);
+    const [hovered, setHovered] = useState(false);
+
+    useEffect(() => {
+        const contact = contactRef.current;
+
+        contact.style.background = props.darkMode ? '#080808' : '#dbdad9';
+    }, [props.darkMode]);
+
     return (
-        <div className="contato_content">
+        <div className="contato_content" ref={contactRef}>
             <div className="contato_title"><h1>Fale conosco</h1></div>
 
-            <div className="contato_container">
+            <div className="contato_container" style={{color: props.darkMode ? '#dbdad9' : '#080808'}}>
                 <p>Preencha o formulário abaixo e entraremos em contato.</p>
                 <div className="contato_box">
-                    <form className="contato_form">
+                    <form className="contato_form" style={{background: props.darkMode ? '#2b2b2b' : '#d4d4d4'}}>
                         <div className="text_input" id="name">
                             <label htmlFor="name" className="contact_text">Nome:</label>
-                            <input type="text" name="fullname" required className="contact_input_name" placeholder="Seu nome completo"/>
+                            <input type="text" name="fullname" required className="contact_input_name" placeholder="Seu nome completo" style={{background: props.darkMode ? '#444444' : '#bbbbbb', color: props.darkMode ? '#ffffff' : '#000000'}}/>
                         </div>
                         <div className="text_input" id="email">
                             <label htmlFor="email" className="contact_text">E-mail:</label>
-                            <input type="email" name="email" required className="contact_input_email" placeholder="email@exemplo.com"/>
+                            <input type="email" name="email" required className="contact_input_email" placeholder="email@exemplo.com" style={{background: props.darkMode ? '#444444' : '#bbbbbb', color: props.darkMode ? '#ffffff' : '#000000'}}/>
                         </div>
                         <div className="text_input" id="phone">
                             <label htmlFor="phone" className="contact_text">Telefone:</label>
-                            <input type="tel" name="phone" required className="contact_input_phone" placeholder="(__) _____-____"/>
+                            <input type="tel" name="phone" required className="contact_input_phone" placeholder="(__) _____-____" style={{background: props.darkMode ? '#444444' : '#bbbbbb', color: props.darkMode ? '#ffffff' : '#000000'}}/>
                         </div>
                         <div className="text_input" id="subject">
                             <label htmlFor="subject" className="contact_text">Assunto:</label>
-                            <textarea name="subject" rows="5" required placeholder="Como podemos te ajudar?"/>
+                            <textarea name="subject" rows="5" required placeholder="Como podemos te ajudar?" style={{background: props.darkMode ? '#444444' : '#bbbbbb', color: props.darkMode ? '#ffffff' : '#000000'}}/>
                         </div>
                         <br/>
-                        <input type="submit" value="ENVIAR" id="contact_button"/>
+                        <input type="submit" value="ENVIAR" id="contact_button" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={{background: hovered ? 'linear-gradient(90deg, #4e12f9, #761bef)' : (props.darkMode ? '#444444' : '#bbbbbb'), color: props.darkMode ? '#ffffff' : '#000000'}}/>
                     </form> 
                 </div>
 
@@ -48,11 +60,11 @@ export default function () {
                 <div className="social_media">
                     <ul className="social_media_container">
                         <li className="contact___container___icon">
-                            <a className="contact___container___icon___instagram" target="_blank" href="https://www.instagram.com/octobitjr?igsh=MWp5M2t0bnJlajRyeQ=="><img src={instagramLogo}/></a>
+                            <a className="contact___container___icon___instagram" target="_blank" href="https://www.instagram.com/octobitjr?igsh=MWp5M2t0bnJlajRyeQ=="><img src={props.darkMode ? instagramLogo : instagramLogoBlack}/></a>
                         </li>
                         
                         <li className="contact___container___icon">
-                            <a className="contact___container___icon___linkedin" target="_blank" href="https://www.linkedin.com/company/octobit-empresa-j%C3%BAnior-usp/"><img src={linkedinLogo}/></a>
+                            <a className="contact___container___icon___linkedin" target="_blank" href="https://www.linkedin.com/company/octobit-empresa-j%C3%BAnior-usp/"><img src={props.darkMode ? linkedinLogo : linkedinLogoBlack}/></a>
                         </li>
                     </ul>
                 </div>

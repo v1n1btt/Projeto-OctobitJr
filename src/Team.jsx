@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import Card from './Card'
 import CaioUehara from './assets/equipe_files/Caio Uehara Martins.jpeg'
 import VictorKikuti from './assets/equipe_files/Victor Kikuti.jpeg'
@@ -15,12 +16,20 @@ import RodrigoLigeiro from './assets/equipe_files/Rodrigo Ligeiro.jpg'
 import TaianeLopes from './assets/equipe_files/Taiane Lopes.jpg'
 import TaysaGuiral from './assets/equipe_files/Taysa Guiral.jpg'
 
-export default function () {
+export default function (props) {
+    const teamRef = useRef(null);
+
+    useEffect(() => {
+        const team = teamRef.current;
+
+        team.style.background = props.darkMode ? '#080808' : '#dbdad9';
+    }, [props.darkMode]);
+
     return (
-        <div className="equipe_content">
+        <div className="equipe_content" ref={teamRef}>
             <div className="equipe_title"><h1>Nossa equipe</h1></div>
 
-            <div className="equipe_container">
+            <div className="equipe_container" style={{color: props.darkMode ? '#dbdad9' : '#080808'}}>
 
                 <Card src={CaioUehara} alt="Caio Uehara" name="Caio Uehara" role="Presidente, Diretor Financeiro"/>
                 <Card src={VictorKikuti} alt="Victor Kikuti" name="Victor Kikuti" role="Vice-Presidente"/>

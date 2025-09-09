@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Fsolar from "./assets/projetos_files/fsolar.png";
 import CadastroFsolar from "./assets/projetos_files/cadastro_FSolar.png";
 import ImoveisFsolar from "./assets/projetos_files/Imoveis_FSolar.png";
@@ -7,7 +7,15 @@ import Abba1 from "./assets/projetos_files/ABBA_1.png";
 import Abba2 from "./assets/projetos_files/ABBA_2.png";
 import Abba3 from "./assets/projetos_files/ABBA_3.png"
 
-export default function () {
+export default function (props) {
+    const projectsRef = useRef(null);
+
+    useEffect(() => {
+        const projects = projectsRef.current;
+
+        projects.style.background = props.darkMode ? '#080808' : '#dbdad9';
+    }, [props.darkMode]);
+
     useEffect(() => {
         document.querySelectorAll('.projeto_slider').forEach(slider => {
             let currentSlide = 0;
@@ -51,10 +59,10 @@ export default function () {
     }, []);
 
     return (
-        <div className="projetos_content">
+        <div className="projetos_content" ref={projectsRef}>
             <div className="projetos_title"><h1>Nossos projetos</h1></div>
 
-            <div className="projetos_container">
+            <div className="projetos_container" style={{color: props.darkMode ? '#dbdad9' : '#080808'}}>
                 <div className="fsolar">
                     <div className="projeto_slider" id="slider1">
                         <div className="projeto_list">
